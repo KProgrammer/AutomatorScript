@@ -73,5 +73,16 @@ def screenshot(params):
 
 
 def clickPicture(params):
-    print(params)
     pyautogui.click(params[0])
+
+
+def doubleClickPicture(params):
+    pyautogui.doubleClick(params[0])
+
+
+def rightClickPicture(params):
+    pyautogui.rightClick(params[0])
+
+
+def middleClickPicture(params):
+    pyautogui.middleClick(params[0])
