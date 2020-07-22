@@ -7,9 +7,9 @@
 
   To move the mouse cursor to point (x, y)
 
-- `click`
+- `click [image]`
   
-  (Left) Clicks the mouse
+  If you provide the image it will find the `image` on the screen and click it, if you dont provide `image`, It (left) clicks the mouse  
   
 - `getinfogui`
 
@@ -46,6 +46,11 @@
 - `hotkey <key1> <key2> ...... ` 
 
   Presses multiple keys at once to initiate shortcuts like Ctrl-S the keys could be ctrl, alt or any number or alphabet
+  
+- `screenshot <file>`
+ 
+   Takes a screenshot of the screen and saves it to `file`
+  
   
 ## How to run an autoscript
 
