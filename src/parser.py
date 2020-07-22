@@ -29,6 +29,8 @@ for line in f:
 
     commands = [
         Command("move", functions.move, 2),
+        Command("click", functions.click, 0),
+        Command("click", functions.clickPicture, 1),
         Command("getinfogui", functions.getinfogui, 0),
         Command("wait", functions.wait, 1)
     ]
