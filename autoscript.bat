@@ -1,2 +1,2 @@
 @echo off
-python parser.py %1
+python src/parser.py %1
