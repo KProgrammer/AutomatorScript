@@ -66,3 +66,11 @@ def typeF(params):
 
 def hotkey(params):
     pyautogui.hotkey(*params)
+
+
+def screenshot(params):
+    pyautogui.screenshot(params[0])
+
+
+def clickPicture(params):
+    pyautogui.click(params[0])

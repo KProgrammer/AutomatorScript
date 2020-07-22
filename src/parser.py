@@ -10,7 +10,10 @@ for line in f:
     params = lineList[1:]
 
     if command == 'click':
-        functions.click()
+        if len(params) == 1:
+            functions.clickPicture(params)
+        else:
+            functions.click()
         #print("Click Karo")
     elif command == 'move':
         if len(params) != 2:
@@ -52,6 +55,8 @@ for line in f:
         functions.typeF(params)
     elif command == 'hotkey':
         functions.hotkey(params)
+    elif command == 'screenshot':
+        functions.screenshot(params)
     else:
         print("Command Not Found")
         break
