@@ -73,4 +73,5 @@ def screenshot(params):
 
 
 def clickPicture(params):
+    print(params)
     pyautogui.click(params[0])

@@ -1,6 +1,24 @@
 import functions
 import sys
 
+
+class Command:
+    def __init__(self, command, cmd_function, params_len):
+        self.command = command
+        self.function = cmd_function
+        self.params_len = params_len
+
+    def run(self, params):
+        if len(params) != self.params_len:
+            # TODO: Add Error Handling
+            print(f"{self.command} requires {self.params_len} parameters")
+        else:
+            if self.params_len:
+                self.function(params)
+            else:
+                self.function()
+
+
 f = open(sys.argv[1])
 
 for line in f:
@@ -9,7 +27,18 @@ for line in f:
     command = lineList[0]
     params = lineList[1:]
 
-    if command == 'click':
+    commands = [
+        Command("move", functions.move, 2),
+        Command("getinfogui", functions.getinfogui, 0),
+        Command("wait", functions.wait, 1)
+    ]
+
+    for new_command in commands:
+        if command == new_command.command and len(params) == new_command.params_len:
+            new_command.run(params)
+            break
+
+    """ if command == 'click':
         if len(params) == 1:
             functions.clickPicture(params)
         else:
@@ -59,7 +88,7 @@ for line in f:
         functions.screenshot(params)
     else:
         print("Command Not Found")
-        break
+        break """
 
 
 f.close()
