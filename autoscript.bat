@@ -1,2 +1,3 @@
 @echo off
-python src/parser.py %1
+python %~dp0\src\parser.py %1
+
