@@ -14,7 +14,7 @@ for line in f:
             functions.clickPicture(params)
         else:
             functions.click()
-        #print("Click Karo")
+
     elif command == 'move':
         if len(params) != 2:
             print("chole, move takes 2 params")
