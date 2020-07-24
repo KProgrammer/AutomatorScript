@@ -83,8 +83,13 @@ def screenshot(params):
 
 
 def doMath(params):
-    print(math_reader.solveParsed(math_reader.parseInput(params[0])))
+    # print(params[0])
+    return math_reader.solveParsed(math_reader.parseInput(params[0]))
 
 
 def printF(params):
     print(params[0])
+
+
+def startLoop(params):
+    return {"commands": [], "on": True, "times": params[0]}
