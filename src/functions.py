@@ -1,5 +1,6 @@
 import pyautogui
 import time
+import math_reader
 
 
 def move(params):
@@ -79,3 +80,7 @@ def hotkey(params):
 
 def screenshot(params):
     pyautogui.screenshot(params[0])
+
+
+def doMath(params):
+    print(math_reader.solveParsed(math_reader.parseInput(params[0])))
