@@ -10,7 +10,6 @@ def move(params):
 
 
 def movePicture(params):
-    print(params)
     t = pyautogui.locateCenterOnScreen(params[0])
     if t == None:
         print('Picture Not Found')

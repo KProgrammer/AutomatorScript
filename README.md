@@ -7,9 +7,13 @@
 
   To move the mouse cursor to point (x, y)
 
-- `click [image]`
+- `move <image>`
+
+    If you provide the path of the image, it moves the pointer to the image if found
+
+- `click`
   
-  If you provide the image it will find the `image` on the screen and click it, if you dont provide `image`, It (left) clicks the mouse  
+  (Left) Clicks the mouse
   
 - `getinfogui`
 
