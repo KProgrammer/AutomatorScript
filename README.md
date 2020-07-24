@@ -58,7 +58,14 @@
 - `math <expression>`
 
     Prints out the output of the mathematical expression
-  
+- ```
+    loop <number/expression>
+    ....
+    ....
+    ....
+    endloop
+    ```
+    Loops a black of code a particular number of times
   
 ## How to run an autoscript
 
