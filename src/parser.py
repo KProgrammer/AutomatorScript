@@ -34,7 +34,8 @@ commands = [
     Command("hotkey", functions.hotkey, -1),
     Command("screenshot", functions.screenshot, 1),
     Command("wait", functions.wait, 1),
-    Command("math", functions.doMath, 1)
+    Command("math", functions.doMath, 1),
+    Command("print", functions.printF, 1)
 ]
 
 

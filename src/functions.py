@@ -84,3 +84,7 @@ def screenshot(params):
 
 def doMath(params):
     print(math_reader.solveParsed(math_reader.parseInput(params[0])))
+
+
+def printF(params):
+    print(params[0])
