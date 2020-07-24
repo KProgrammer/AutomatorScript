@@ -54,6 +54,10 @@
 - `screenshot <file>`
  
    Takes a screenshot of the screen and saves it to `file`
+
+- `math <expression>`
+
+    Prints out the output of the mathematical expression
   
   
 ## How to run an autoscript
