@@ -9,6 +9,16 @@ def move(params):
         print("Please enter a integer")
 
 
+def movePicture(params):
+    print(params)
+    t = pyautogui.locateCenterOnScreen(params[0])
+    if t == None:
+        print('Picture Not Found')
+    else:
+        x, y = t
+        pyautogui.moveTo(x, y, duration=0.25)
+
+
 def click():
     pyautogui.click()
 
@@ -70,19 +80,3 @@ def hotkey(params):
 
 def screenshot(params):
     pyautogui.screenshot(params[0])
-
-
-def clickPicture(params):
-    pyautogui.click(params[0])
-
-
-def doubleClickPicture(params):
-    pyautogui.doubleClick(params[0])
-
-
-def rightClickPicture(params):
-    pyautogui.rightClick(params[0])
-
-
-def middleClickPicture(params):
-    pyautogui.middleClick(params[0])

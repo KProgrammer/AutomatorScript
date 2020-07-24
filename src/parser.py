@@ -23,14 +23,11 @@ f = open(sys.argv[1])
 
 commands = [
     Command("move", functions.move, 2),
+    Command("move", functions.movePicture, 1),
     Command("click", functions.click, 0),
     Command("doubleclick", functions.doubleclick, 0),
     Command("middleclick", functions.middleclick, 0),
     Command("rightclick", functions.rightclick, 0),
-    Command("click", functions.clickPicture, 1),
-    Command("doubleclick", functions.doubleClickPicture, 1),
-    Command("middleclick", functions.middleClickPicture, 1),
-    Command("rightclick", functions.rightClickPicture, 1),
     Command("getinfogui", functions.getinfogui, 0),
     Command("scroll", functions.scroll, 1),
     Command("type", functions.typeF, 1),
