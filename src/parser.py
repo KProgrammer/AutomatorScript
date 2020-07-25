@@ -59,6 +59,7 @@ def run(command, params):
 commands = [
     Command("move", functions.move, 2),
     Command("move", functions.movePicture, 1),
+    Command("move", functions.moveDuration, 3),
     Command("click", functions.click, 0),
     Command("doubleclick", functions.doubleclick, 0),
     Command("middleclick", functions.middleclick, 0),

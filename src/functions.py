@@ -99,3 +99,11 @@ def waitP(params):
     while True:
         if pyautogui.locateOnScreen(params[0]):
             break
+
+
+def moveDuration(params):
+    try:
+        pyautogui.moveTo(int(params[0]), int(
+            params[1]), duration=(int(params[2])/100))
+    except:
+        print("Please enter a integer")
