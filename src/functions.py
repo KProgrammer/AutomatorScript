@@ -93,3 +93,9 @@ def printF(params):
 
 def startLoop(params):
     return {"commands": [], "on": True, "times": params[0]}
+
+
+def waitP(params):
+    while True:
+        if pyautogui.locateOnScreen(params[0]):
+            break

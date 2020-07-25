@@ -72,7 +72,8 @@ commands = [
     Command("math", functions.doMath, 1),
     Command("loop", loop_setter, 1),
     Command("endloop", loopF, 0),
-    Command("print", functions.printF, 1)
+    Command("print", functions.printF, 1),
+    Command("waitP", functions.waitP, 1)
 ]
 
 
