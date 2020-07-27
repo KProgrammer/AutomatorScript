@@ -11,6 +11,14 @@
 
     If you provide the path of the image, it moves the pointer to the image if found
 
+- `move <x> <y> <duration>`
+
+    Moves the cursor to the (x, y) coordinate in `duration` units(default is 25)
+
+- `move |picture|`
+
+    Moves the cursor to the picture assigned to waitP method
+
 - `click`
   
   (Left) Clicks the mouse
@@ -51,6 +59,9 @@
 
   Presses multiple keys at once to initiate shortcuts like Ctrl-S the keys could be ctrl, alt or any number or alphabet
   
+- `waitP <picture>`
+
+    Waits for the picture to appear on the screen and sets `|picture|` so you can use it in move
 - `screenshot <file>`
  
    Takes a screenshot of the screen and saves it to `file`
@@ -65,7 +76,7 @@
     ....
     endloop
     ```
-    Loops a black of code a particular number of times
+    Loops a block of code a particular number of times
   
 ## How to run an autoscript
 

@@ -74,7 +74,8 @@ commands = [
     Command("loop", loop_setter, 1),
     Command("endloop", loopF, 0),
     Command("print", functions.printF, 1),
-    Command("waitP", functions.waitP, 1)
+    Command("waitP", functions.waitP, 1),
+    Command("drag", functions.drag, 3)
 ]
 
 
