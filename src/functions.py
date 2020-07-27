@@ -2,6 +2,8 @@ import pyautogui
 import time
 import math_reader
 
+location = {}
+
 
 def move(params):
     try:
@@ -11,12 +13,19 @@ def move(params):
 
 
 def movePicture(params):
-    t = pyautogui.locateCenterOnScreen(params[0])
-    if t == None:
-        print('Picture Not Found')
+    global location
+    if params[0] == '|picture|':
+        if location:
+            move([location['x'], location['y']])
+        else:
+            print('Location not defined')
     else:
-        x, y = t
-        pyautogui.moveTo(x, y, duration=0.25)
+        t = pyautogui.locateCenterOnScreen(params[0])
+        if t == None:
+            print('Picture Not Found')
+        else:
+            x, y = t
+            pyautogui.moveTo(x, y, duration=0.25)
 
 
 def click():
@@ -96,8 +105,11 @@ def startLoop(params):
 
 
 def waitP(params):
+    global location
     while True:
-        if pyautogui.locateOnScreen(params[0]):
+        temp = pyautogui.locateOnScreen(params[0])
+        if temp:
+            location['x'], location['y'] = temp[0], temp[1]
             break
 
 
