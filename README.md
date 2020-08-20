@@ -112,7 +112,7 @@ type {name}
 After that, in main.py, import src/templater.py as templater or whatever name you prefer. Then you can write 
 ```python
 name = "KProgrammer"
-templater.fill_template('temp.atemplate', 'auto.autoscript', name=dynamic_name)
+templater.fill_template('temp.atemplate', 'auto.autoscript', name=name)
 ```
 
 Then when you run the python file you will see that auto.autoscript looks something like this
