@@ -59,7 +59,7 @@ def mouseup():
 def wait(params):
     try:
 
-        time.sleep(int(params[0]))
+        time.sleep(float(params[0]))
     except:
         print("Please enter integer")
 
