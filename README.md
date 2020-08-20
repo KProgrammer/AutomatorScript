@@ -92,5 +92,37 @@ You should then be able to run `autoscript  first.autoscript` in the cmd
 
 After you run this, I recommend you to run `getinfogui` in an autoscript file, and you should be able to see the proper positions to make automation easier
   
+## Use Templating to dynamically fill elements in an autoscript
+
+Sometimes you have a value which changes constantly and you want to dynamically fill the content based on some logic. Templating helps you do that. 
+
+We are gonna need 3 files for this
+
+- Python file with the logic, we are gonna call it main.py
+- Autoscript Template file, which for this example is gonna be temp.atemplate
+- Autoscript File which is gonna hold the output for the template, which is ,for this example, auto.autoscript
+
+First, write the template, in which the dynamic elements are between curly braces({name}).
+```
+move 100 100
+click
+type {name}
+```
+
+After that, in main.py, import src/templater.py as templater or whatever name you prefer. Then you can write 
+```python
+name = "KProgrammer"
+templater.fill_template('temp.atemplate', 'auto.autoscript', name=dynamic_name)
+```
+
+Then when you run the python file you will see that auto.autoscript looks something like this
+```
+move 100 100
+click
+type KProgrammer
+```
+
+Then 
+
   
   
